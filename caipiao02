@@ -1,0 +1,35 @@
+# -*- coding:utf-8 -*-
+import  random as rd
+active=True
+list1 = ['01','02','03','04','05','06','07','08','09','10','11']
+list2 = [12,13,14,15,16,17,18,19,20,21,22]
+list3 = [23,24,25,26,27,28,29,30,31,33]
+list4 = ['01','02','03','04','05','06','07','08','09','10','11','12','13','14','15','16']
+while   True:
+
+
+    t1 = int(input('输入type1:'))
+    t2 = int(input('输入type2:'))
+    t3 = int(input('输入type3:'))
+    sum_t =int((t1+t2+t3))
+    if sum_t > int('6'):
+        print('汇总输入type个数大于6,请重新输入')
+        print('*'*50)
+        active= False
+    if sum_t < int('6'):
+        print('汇总输入type个数小于6,请重新输入')
+        print('*' * 50)
+        active = False
+    else:
+        a1 = rd.sample(list1, t1)
+        a2 = rd.sample(list2, t2)
+        a3 = rd.sample(list3, t3)
+        a4 = rd.sample(list4, 1)
+        s = (a1+a2+a3+a4)
+
+        print(a1)
+        print(a2)
+        print(a3)
+        print(a4)
+        print(s)
+        print('*' * 50)
